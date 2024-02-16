@@ -196,10 +196,10 @@ CUDA_VISIBLE_DEVICES=0 python src/train_bash.py \
 python src/export_model.py \
     --model_name_or_path meta-llama/Llama-2-13b-chat-hf \
     --adapter_name_or_path trained_model_sft \
-    --export_dir trained_model_output
+    --export_dir trained_model_output \
     --template llama2 \
     --finetuning_type lora \
-    --export_quantization_bit 4 \
+    --export_quantization_bit 4 
 ```
 
 ```bash
@@ -207,10 +207,10 @@ python src/export_model.py \
 python src/export_model.py \
     --model_name_or_path mistralai/Mixtral-8x7B-Instruct-v0.1 \
     --adapter_name_or_path trained_model_sft \
-    --export_dir trained_model_output
+    --export_dir trained_model_output \
     --template mistral \
     --finetuning_type lora \
-    --export_quantization_bit 4 \
+    --export_quantization_bit 4
 ```
 
 ### Final Words
