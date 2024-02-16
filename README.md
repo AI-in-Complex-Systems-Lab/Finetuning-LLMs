@@ -164,7 +164,7 @@ CUDA_VISIBLE_DEVICES=0 python src/train_bash.py \
     --template llama2 \
     --finetuning_type lora \
     --quantization_bit 4 \
-    --checkpoint_dir trained_model_sft \
+    --adapter_name_or_path trained_model_sft \
     --output_dir trained_model_output \
     --per_device_eval_batch_size 1 \
     --max_samples 10 \
@@ -182,7 +182,7 @@ CUDA_VISIBLE_DEVICES=0 python src/train_bash.py \
     --template mistral \
     --finetuning_type lora \
     --quantization_bit 4 \
-    --checkpoint_dir trained_model_sft \
+    --adapter_name_or_path trained_model_sft \
     --output_dir trained_model_output \
     --per_device_eval_batch_size 1 \
     --max_samples 10 \
