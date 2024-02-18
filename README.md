@@ -107,7 +107,7 @@ accelerate launch src/train_bash.py \
     --template llama2 \
     --finetuning_type lora \
     --quantization_bit 4 \
-    --lora_target q_proj,v_proj \
+    --lora_target all \
     --output_dir trained_model_sft \
     --overwrite_cache \
     --per_device_train_batch_size 2 \
@@ -131,7 +131,7 @@ accelerate launch src/train_bash.py \
     --template mistral \
     --finetuning_type lora \
     --quantization_bit 4 \
-    --lora_target q_proj,v_proj \
+    --lora_target all \
     --output_dir trained_model_sft \
     --overwrite_cache \
     --per_device_train_batch_size 2 \
@@ -198,8 +198,7 @@ python src/export_model.py \
     --adapter_name_or_path trained_model_sft \
     --export_dir trained_model_output \
     --template llama2 \
-    --finetuning_type lora \
-    --export_quantization_bit 4 
+    --finetuning_type lora 
 ```
 
 ```bash
@@ -209,8 +208,7 @@ python src/export_model.py \
     --adapter_name_or_path trained_model_sft \
     --export_dir trained_model_output \
     --template mistral \
-    --finetuning_type lora \
-    --export_quantization_bit 4
+    --finetuning_type lora
 ```
 
 ### Final Words
